@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h3 id="heading"></h3>
+    <button id="btn">Generate Password</button>
+    <h1 id="result"></h1>
+    <script src="app.js"></script>
+    <script>
+        let p = new Password();
+        document.getElementById('btn').addEventListener('click', function () {
+            document.getElementById('result').innerHTML = "Random Password: " + p.generatePassword(7);
+        });
+    </script>
+</body>
+
+</html>
