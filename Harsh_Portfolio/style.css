@@ -4,17 +4,20 @@
 }
 
 body {
+  width: 100%;
   background-color: rgb(0, 0, 33);
   color: white;
   font-family: "Poppins", sans-serif;
 }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 80px;
   background-color: rgb(18, 18, 62);
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -25,8 +28,6 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: white;
-
-
 }
 
 nav ul li {
@@ -37,7 +38,6 @@ nav ul li {
 nav ul li a:hover {
   color: rgb(153, 153, 226);
   font-size: 1.01rem;
-
 }
 
 .left {
@@ -51,7 +51,7 @@ nav ul li a:hover {
   margin: 130px 0;
 }
 
-.firstSection>div {
+.firstSection > div {
   width: 30%;
   /* background-color: red; */
 }
@@ -59,17 +59,15 @@ nav ul li a:hover {
 .leftSection {
   /* background-color: red; */
   font-size: 2rem;
-
-
 }
-.leftSection .buttons{
+.leftSection .buttons {
   padding: 50px 0;
 }
-#github{
+#github {
   color: white;
   text-decoration: none;
 }
-.leftSection .btn{
+.leftSection .btn {
   padding: 12px;
   background-color: #1e2167;
   color: white;
@@ -119,7 +117,6 @@ main hr {
   height: 2px;
   margin: 84px 0;
   display: flex;
-
 }
 
 .secondSection .vertical {
@@ -155,10 +152,9 @@ main hr {
 
 footer {
   background-color: #0e0e1a;
-
 }
 
-.footer>div {
+.footer > div {
   width: 223px;
 }
 
@@ -166,7 +162,6 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 23px 122px;
-
 }
 
 .footer .footer-second ul li {
@@ -189,4 +184,109 @@ footer .footer-rights {
 
 .text-gray {
   color: gray;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Add some margin between the items */
+  }
+
+  .firstSection {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .firstSection > div {
+    width: 80%; /* Adjust the width to be more responsive */
+    margin-bottom: 30px; /* Add margin to separate sections */
+  }
+
+  .rightSection img {
+    width: 80%;
+  }
+
+  .secondSection {
+    max-width: 95vw;
+    height: auto; /* Adjust height for better fit */
+  }
+
+  .secondSection .box {
+    width: 90vw; /* Adjust width for better fit */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items */
+  }
+
+  .secondSection .vertical {
+    margin: 20px 0; /* Add margin to separate vertical sections */
+  }
+  .secondSection h1 {
+    font-size: 1.9rem;
+    margin-left: 19rem;
+}
+  .vertical-title,
+  .vertical-desc {
+    position: relative;
+    top: -9px;
+    left: 47px;
+    color: gray;
+    width: 150px;
+    font-size: 9px;
+}
+
+  .image-top {
+    width: 70px;
+    position: relative;
+    top: 75px;
+    left: -191px;
+  }
+  .vertical-title {
+    position: relative;
+    top: 27px;
+    left: -123px;
+    width: 150px;
+    font-size: 14px;
+  }
+  div .box{
+    display: none;
+  }
+  .text-gray {
+    margin-left: 17rem;
+}
+
+}
+@media screen and (max-width: 506px){
+  .text-gray {
+    margin-left: 8rem;
+}
+.secondSection h1 {
+  box-sizing: border-box;
+  margin-left: 10rem;
+}
+.secondSection .vertical {
+  height: 179px;
+  width: 1px;
+  box-sizing: border-box;
+}
+.vertical-title {
+  top: 20px;
+  left: -135px;
+  width: 147px;
+  box-sizing: border-box;
+}
+.image-top {
+  left: -211px;
+  box-sizing: border-box;
+}
+
 }
